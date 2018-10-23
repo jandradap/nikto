@@ -26,15 +26,8 @@ COPY --from=build /nikto /nikto
 RUN apk --update --clean-protected --no-cache add \
   openssl \
   perl \
-  perl-net-ssleay \
-  curl \
-  py-pip \
-&& pip install ansi2html
+  perl-net-ssleay
 
 ENV PATH /nikto/program:$PATH
 
 WORKDIR /nikto/program
-
-#ENTRYPOINT ["nikto.pl"]
-
-CMD [ "nikto.pl -Help"]
