@@ -33,4 +33,4 @@ ENV PATH /nikto/program:$PATH
 
 WORKDIR /nikto/program
 
-ENTRYPOINT ["nikto.pl"]
+# ENTRYPOINT ["nikto.pl"]
